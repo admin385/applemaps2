@@ -295,6 +295,7 @@ function clickMarker1(e, t) {
         (s = ""), (c = "@" + i.slice(-3, -1) + o.slice(-3, -1)), (s = i.slice(-1) + o.slice(-1));
         var g = !1;
         rmarkers.indexOf(c) < 0 && ((rmarkers += c), (g = !0)),
+  if (g) { rect = rectf(n, n.Zone); rects.push(map.addOverlay(rect));}  //26Feb26: re-added Fix 30Jul24
             (marker = new mapkit.MarkerAnnotation(new mapkit.Coordinate(e, t), {
                 title: g ? c : "",
                 subtitle: "",
