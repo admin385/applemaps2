@@ -295,7 +295,6 @@ function clickMarker1(e, t) {
         (s = ""), (c = "@" + i.slice(-3, -1) + o.slice(-3, -1)), (s = i.slice(-1) + o.slice(-1));
         var g = !1;
         rmarkers.indexOf(c) < 0 && ((rmarkers += c), (g = !0)),
-  if (g) { rect = rectf(n, n.Zone); rects.push(map.addOverlay(rect));}  //26Feb26: re-added Fix 30Jul24
             (marker = new mapkit.MarkerAnnotation(new mapkit.Coordinate(e, t), {
                 title: g ? c : "",
                 subtitle: "",
@@ -303,6 +302,7 @@ function clickMarker1(e, t) {
             })),
             markers.push(marker),
             map.addAnnotation(marker);
+  if (g) { rect = rectf(n, n.Zone); rects.push(map.addOverlay(rect));}  //26Feb26: re-added Fix 30Jul24
     } else if (params.has("Bing") || location.href.toLowerCase().indexOf("bing") > 0)
         (marker = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(e, t), {
             title: c,
